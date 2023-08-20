@@ -1,24 +1,8 @@
-version: "3.9"
-
-volumes:
-  db-store:
-
 services:
   main:
     image: mcr.microsoft.com/devcontainers/python:1-3.11-bullseye
     volumes:
       - ../:/workspace
-    environment:
-      - POSTGRES_HOST=db
-      - POSTGRES_PORT=5432
-    env_file:
-      - postgresql.env
     tty: true
     stdin_open: true
 
-  # db:
-  #   image: postgresql
-  #   volumes:
-  #     - db-store:/var/lib/postgresql/data
-  #   env_file:
-  #     - postgresql.env
