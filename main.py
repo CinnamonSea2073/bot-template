@@ -26,7 +26,7 @@ async def on_ready():
 
 
 bot.load_extensions(
-    # 'cogs.hoge',
+    'cogs.hoge',
     store=False
 )
 
