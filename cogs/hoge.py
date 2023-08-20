@@ -9,12 +9,11 @@ class Hoge(commands.Cog):
         print(f"init -> {self.__class__}")
         self.bot = bot
 
-    group = SlashCommandGroup(name="name", description="desc")
+    group = SlashCommandGroup(name="name", description="description")
 
     @group.command(name="", description="")
-    def hoge(self, ctx: discord.ApplicationContext):
-        ctx.response.send_message(content="hoge")
-        pass
+    async def hoge(self, ctx: discord.ApplicationContext):
+        await ctx.response.send_message(content="hoge")
 
 def setup(bot: commands.bot):
     bot.add_cog(Hoge(bot))
