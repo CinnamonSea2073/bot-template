@@ -6,7 +6,7 @@
 	"dockerComposeFile": "compose.yaml",
 	"workspaceFolder": "/workspace",
 	"service": "main",
-	"postCreateCommand": "pip3 install -r requirements.txt & source .env",
+	"postCreateCommand": "pip3 install -r requirements.txt",
 	"customizations": {
 		"vscode": {
 			"extensions": [
