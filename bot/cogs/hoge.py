@@ -11,9 +11,9 @@ class Hoge(commands.Cog):
 
     group = SlashCommandGroup(name="name", description="description")
 
-    @group.command(name="", description="")
-    async def hoge(self, ctx: discord.ApplicationContext):
-        await ctx.response.send_message(content="hoge")
+    @group.command(name="ping", description="通信テスト")
+    async def ping(self, ctx: discord.ApplicationContext):
+        await ctx.response.send_message(content="pong!")
 
 def setup(bot: commands.bot):
     bot.add_cog(Hoge(bot))

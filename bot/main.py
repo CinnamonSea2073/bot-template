@@ -3,12 +3,10 @@ from discord.ext import commands
 import os
 import asyncio
 
-
 intents = discord.Intents.default()
 intents.guilds = True
 bot = commands.AutoShardedBot(intents=intents)
-TOKEN = os.getenv(f"TOKEN")
-
+TOKEN = os.getenv("TOKEN")
 path = "./cogs"
 
 
@@ -27,7 +25,7 @@ async def on_ready():
 
 bot.load_extensions(
     'cogs.hoge',
-    store=False
+    store=True
 )
 
 bot.run(TOKEN)
